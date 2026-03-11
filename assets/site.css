@@ -149,6 +149,11 @@ main {
   padding: 1.25rem 0 1rem;
 }
 
+.hero-split {
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  align-items: start;
+}
+
 .eyebrow,
 .kicker {
   display: inline-flex;
@@ -251,6 +256,96 @@ p {
   margin-top: 4rem;
 }
 
+.hero-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-preview::after {
+  content: '';
+  position: absolute;
+  inset: auto -18% -42% auto;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.08);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.step-card {
+  position: relative;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.mockup {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(214, 211, 209, 0.08);
+  background: rgba(12, 10, 9, 0.45);
+}
+
+.mockup-title {
+  color: var(--subtle);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mockup-list {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+}
+
+.mockup-list li {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(214, 211, 209, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--muted);
+}
+
+.mockup-list li.is-current {
+  border-color: rgba(20, 184, 166, 0.35);
+  background: rgba(20, 184, 166, 0.08);
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(214, 211, 209, 0.08);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .section-header {
   display: grid;
   gap: 0.75rem;
@@ -325,6 +420,10 @@ p {
   }
 
   .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-split {
     grid-template-columns: 1fr;
   }
 }
