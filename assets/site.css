@@ -35,6 +35,8 @@ body {
 
 a {
   color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
 }
 
 img,
@@ -407,6 +409,45 @@ p {
 
 .footer-links a:hover {
   color: var(--text);
+}
+
+.footer-meta {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-meta a {
+  color: var(--muted);
+}
+
+.footer-meta a:hover {
+  color: var(--text);
+}
+
+.contact-list,
+.resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-list li,
+.resource-list li {
+  color: var(--muted);
+}
+
+.contact-list strong,
+.resource-list strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--text);
+}
+
+.fine-print {
+  color: var(--subtle);
+  font-size: 0.9rem;
 }
 
 @media (max-width: 52rem) {
