@@ -18,6 +18,12 @@ HTML_FILES = [
 OTHER_REQUIRED = [
     ROOT / 'assets' / 'site.css',
     ROOT / 'assets' / 'favicon.svg',
+    ROOT / 'assets' / 'apple-touch-icon.png',
+    ROOT / 'assets' / 'icon-192.png',
+    ROOT / 'assets' / 'icon-512.png',
+    ROOT / 'assets' / 'og-foculoom.png',
+    ROOT / 'assets' / 'og-focus-tasks.png',
+    ROOT / 'assets' / 'site.webmanifest',
     ROOT / 'robots.txt',
     ROOT / 'sitemap.xml',
 ]
@@ -37,6 +43,7 @@ PUBLIC_TEXT_FILES = [
     ROOT / 'robots.txt',
     ROOT / 'sitemap.xml',
     ROOT / 'assets' / 'site.css',
+    ROOT / 'assets' / 'site.webmanifest',
     ROOT / 'scripts' / 'build_site.py',
     *HTML_FILES,
 ]
@@ -51,6 +58,10 @@ HREF_PATTERN = re.compile(r"(?:href|src)=[\"']([^\"']+)[\"']")
 TITLE_PATTERN = re.compile(r'<title>.+?</title>', re.IGNORECASE | re.DOTALL)
 CANONICAL_PATTERN = re.compile(r"rel=[\"']canonical[\"']", re.IGNORECASE)
 MAIN_PATTERN = re.compile(r'<main\b', re.IGNORECASE)
+MANIFEST_PATTERN = re.compile(r"rel=[\"']manifest[\"']", re.IGNORECASE)
+APPLE_TOUCH_ICON_PATTERN = re.compile(r"rel=[\"']apple-touch-icon[\"']", re.IGNORECASE)
+OG_IMAGE_PATTERN = re.compile(r"property=[\"']og:image[\"']", re.IGNORECASE)
+TWITTER_CARD_PATTERN = re.compile(r"name=[\"']twitter:card[\"']", re.IGNORECASE)
 
 
 def resolve_local_target(source: Path, target: str) -> Path | None:
@@ -97,6 +108,14 @@ for html_path in HTML_FILES:
         failures.append(f'{rel} is missing a canonical link.')
     if not MAIN_PATTERN.search(text):
         failures.append(f'{rel} is missing a <main> element.')
+    if not MANIFEST_PATTERN.search(text):
+        failures.append(f'{rel} is missing a web manifest link.')
+    if not APPLE_TOUCH_ICON_PATTERN.search(text):
+        failures.append(f'{rel} is missing an apple-touch-icon link.')
+    if not OG_IMAGE_PATTERN.search(text):
+        failures.append(f'{rel} is missing an og:image meta tag.')
+    if not TWITTER_CARD_PATTERN.search(text):
+        failures.append(f'{rel} is missing a twitter:card meta tag.')
 
     for target in HREF_PATTERN.findall(text):
         local_target = resolve_local_target(html_path, target)
