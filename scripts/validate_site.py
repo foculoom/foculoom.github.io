@@ -29,6 +29,24 @@ EXPECTED_URLS = {
     'https://foculoom.com/terms.html',
     'https://foculoom.com/accessibility.html',
 }
+PUBLIC_TEXT_FILES = [
+    ROOT / 'README.md',
+    ROOT / '.github' / 'workflows' / 'pages.yml',
+    ROOT / '.gitignore',
+    ROOT / 'CNAME',
+    ROOT / 'robots.txt',
+    ROOT / 'sitemap.xml',
+    ROOT / 'assets' / 'site.css',
+    ROOT / 'scripts' / 'build_site.py',
+    *HTML_FILES,
+]
+FORBIDDEN_PUBLIC_REFERENCES = {
+    '../foculoomllc': 'internal sibling repo reference',
+    '../ai-foculoom': 'internal sibling repo reference',
+    '../scratch/': 'internal scratch repo reference',
+    '/Users/': 'absolute local filesystem path',
+    '.copilot/session-state': 'session-state path',
+}
 HREF_PATTERN = re.compile(r"(?:href|src)=[\"']([^\"']+)[\"']")
 TITLE_PATTERN = re.compile(r'<title>.+?</title>', re.IGNORECASE | re.DOTALL)
 CANONICAL_PATTERN = re.compile(r"rel=[\"']canonical[\"']", re.IGNORECASE)
@@ -56,6 +74,16 @@ failures: list[str] = []
 for path in HTML_FILES + OTHER_REQUIRED:
     if not path.exists():
         failures.append(f'Missing required file: {path.relative_to(ROOT)}')
+
+for text_path in PUBLIC_TEXT_FILES:
+    if not text_path.exists():
+        continue
+
+    text = text_path.read_text(encoding='utf-8')
+    rel = text_path.relative_to(ROOT)
+    for snippet, label in FORBIDDEN_PUBLIC_REFERENCES.items():
+        if snippet in text:
+            failures.append(f'{rel} contains forbidden public reference ({label}): {snippet}')
 
 for html_path in HTML_FILES:
     if not html_path.exists():
