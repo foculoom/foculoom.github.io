@@ -4,11 +4,11 @@ Static website for Foculoom.
 
 This repo hosts a small, static GitHub Pages site for `foculoom.com`. The current goal is a narrow pre-launch site with a flagship product page, support URL, and legal/supporting pages that can grow with the first app release.
 
-## Content guardrails
+## Public repo guardrails
 
-- Use `../foculoomllc` as the source of truth for public website copy.
-- Do not reuse `../ai-foculoom/Strategy.md` as publishable product strategy.
-- Do not copy wording from `../scratch/websites/emtosa.github.io` without re-verifying it against current `foculoomllc` docs.
+- Treat everything in this repo as public, including files, commit messages, workflow configuration, and workflow logs.
+- Do not add secrets, internal repo paths, private draft links, or private operational notes.
+- Keep public copy accurate and intentionally narrow while the site is still pre-launch.
 - Avoid exact pricing, medical claims, wellness framing, AI claims, collaboration claims, and child-directed launch framing for the flagship unless those details are explicitly confirmed.
 
 ## Local workflow
@@ -35,4 +35,4 @@ python3 -m http.server --directory _site 8000
 
 GitHub Actions builds and deploys the Pages artifact from `_site/`.
 
-This repo intentionally does not commit a `CNAME` file because the site is designed to deploy through a custom GitHub Pages workflow. Configure the approved custom domain in the repository's Pages settings and DNS after the repository is connected to GitHub.
+This repo commits a `CNAME` file for `foculoom.com`. Keep the committed `CNAME`, the repository's Pages settings, and DNS aligned whenever the site's domain configuration changes.
