@@ -2,13 +2,18 @@
 
 Static website for Foculoom.
 
-This repo hosts a small, static GitHub Pages site for `foculoom.com`. The current goal is a narrow pre-launch site with a flagship product page, support URL, and legal/supporting pages that can grow with the first app release.
+This repo hosts the public GitHub Pages site for `foculoom.com`. The current direction is:
+
+- a company-level homepage that explains the small set of product lanes guiding Foculoom's work
+- a focused public page for the first announced app, `Focus & Tasks`
+- public support, privacy, accessibility, and legal pages that stay aligned with the live site scope
 
 ## Public repo guardrails
 
 - Treat everything in this repo as public, including files, commit messages, workflow configuration, and workflow logs.
 - Do not add secrets, internal repo paths, private draft links, or private operational notes.
 - Keep public copy accurate and intentionally narrow while the site is still pre-launch.
+- It is fine to describe the company's product lanes at a high level, but do not present unannounced products as if they are already public releases.
 - Avoid exact pricing, medical claims, wellness framing, AI claims, collaboration claims, and child-directed launch framing for the flagship unless those details are explicitly confirmed.
 
 ## Local workflow
