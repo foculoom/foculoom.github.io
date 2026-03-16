@@ -48,6 +48,7 @@ REQUIRED_PUBLIC_TOKENS = {
     'mailto:support@foculoom.com': 'support email',
     'mailto:hello@foculoom.com': 'general contact email',
 }
+BILLING_REQUIRED_FILES = [path for path in HTML_FILES if path != ROOT / '404.html']
 PUBLIC_TEXT_FILES = [
     ROOT / 'README.md',
     ROOT / '.github' / 'workflows' / 'pages.yml',
@@ -145,6 +146,8 @@ for html_path in HTML_FILES:
     for token, label in REQUIRED_PUBLIC_TOKENS.items():
         if token not in text:
             failures.append(f'{rel} is missing required public {label}: {token}')
+    if html_path in BILLING_REQUIRED_FILES and 'mailto:billing@foculoom.com' not in text:
+        failures.append(f'{rel} is missing the billing contact email: mailto:billing@foculoom.com')
     if not LANG_PATTERN.search(text):
         failures.append(f'{rel} is missing an html lang attribute.')
     if not TITLE_PATTERN.search(text):
