@@ -8,6 +8,12 @@ This repo hosts the public GitHub Pages site for `foculoom.com`. The current dir
 - focused public product pages inside the same site, including `Focus & Tasks`
 - public support, privacy, accessibility, and legal pages that stay aligned with the live site scope
 
+## Customer-facing content workflow
+
+- Use `.github/instructions/website-copy.instructions.md` as the public voice and copy guide.
+- Use `.github/instructions/website-publish.instructions.md` before merging public-site edits.
+- Use `.github/agents/website-editor.agent.md` for an optional dedicated copy-review or rewrite pass when a change is mostly messaging.
+
 ## Public repo guardrails
 
 - Treat everything in this repo as public, including files, commit messages, workflow configuration, and workflow logs.
