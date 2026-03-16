@@ -148,6 +148,8 @@ for html_path in HTML_FILES:
             failures.append(f'{rel} is missing required public {label}: {token}')
     if html_path in BILLING_REQUIRED_FILES and 'mailto:billing@foculoom.com' not in text:
         failures.append(f'{rel} is missing the billing contact email: mailto:billing@foculoom.com')
+    if 'DBA Foculoom' in text and 'd/b/a Foculoom' in text:
+        failures.append(f'{rel} mixes DBA and d/b/a forms for the company name.')
     if not LANG_PATTERN.search(text):
         failures.append(f'{rel} is missing an html lang attribute.')
     if not TITLE_PATTERN.search(text):
