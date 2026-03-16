@@ -8,7 +8,7 @@
 `foculoom.github.io` is the public static website for Foculoom.
 
 - Treat everything in this repo as public.
-- Keep public copy narrow, accurate, and appropriate for a pre-launch site.
+- Keep public copy narrow, accurate, and customer-facing while some products are still marked as coming soon.
 - Avoid internal repo paths, private notes, secrets, and any other non-public operational details.
 - Avoid medical, diagnosis, treatment, therapy, or wellness framing unless the user explicitly confirms it belongs in public copy.
 
@@ -40,25 +40,28 @@ focus-tasks/        Product-specific public landing page content
 assets/             Public CSS, icons, images, and manifest files
 scripts/            Local validation and build helpers
 _site/              Generated publishable artifact
-.github/            GitHub config and Copilot instructions
+.github/            GitHub config, instructions, agents, and Copilot guidance
 README.md           Human-readable source of truth for public-site guardrails
 ```
 
 ## Working Rules
 
 - Use `README.md` as the source of truth for site scope and public guardrails.
+- Use `.github/instructions/website-copy.instructions.md` for public-site tone, status, and anti-roadmap wording.
+- Use `.github/instructions/website-publish.instructions.md` as the merge checklist for customer-facing edits.
 - Treat all repository content, filenames, logs, and generated output as public-facing.
-- Keep copy intentionally narrow while the site is pre-launch.
+- Keep copy intentionally narrow and customer-facing while products may still be coming soon.
 - Avoid medical/diagnosis/treatment/therapy/wellness framing.
-- Prefer specific, factual copy over speculative launch messaging.
+- Prefer specific, factual product copy over speculative rollout or launch messaging.
 - Validate with `python3 scripts/validate_site.py` and `python3 scripts/build_site.py` after changes.
 - Use `python3 -m http.server --directory _site 8000` to preview the built site when needed.
+- For copy-heavy tasks, prefer the optional `website-editor` agent for a rewrite or review pass.
 
 ## Boundaries
 
 - ✅ Safe: tighten public copy, guardrails, and repo-local AI instructions
 - ✅ Safe: update static-site docs to match current scripts and site behavior
-- ⚠️ Ask first: changes that broaden launch claims, product positioning, or public policy language in a meaningful way
+- ⚠️ Ask first: changes that broaden product-positioning claims, add new live availability claims, or materially change public policy language
 - ⚠️ Ask first: changes to `.github/workflows/` or deployment behavior
 - 🚫 Never: add secrets, internal repo paths, private notes, or unpublished operational details
 - 🚫 Never: modify CI workflows as part of this task
