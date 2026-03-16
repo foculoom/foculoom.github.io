@@ -41,6 +41,13 @@ OTHER_REQUIRED = [
     ROOT / 'sitemap.xml',
 ]
 EXPECTED_URLS = set(EXPECTED_PAGE_URLS.values()) - {'https://foculoom.com/404.html'}
+REQUIRED_PUBLIC_TOKENS = {
+    'Foculoom LLC': 'company legal name',
+    '2108 N ST STE N, Sacramento, CA 95816': 'company address',
+    'tel:+13102701918': 'company phone link',
+    'mailto:support@foculoom.com': 'support email',
+    'mailto:hello@foculoom.com': 'general contact email',
+}
 PUBLIC_TEXT_FILES = [
     ROOT / 'README.md',
     ROOT / '.github' / 'workflows' / 'pages.yml',
@@ -135,6 +142,9 @@ for html_path in HTML_FILES:
 
     text = html_path.read_text(encoding='utf-8')
     rel = html_path.relative_to(ROOT)
+    for token, label in REQUIRED_PUBLIC_TOKENS.items():
+        if token not in text:
+            failures.append(f'{rel} is missing required public {label}: {token}')
     if not LANG_PATTERN.search(text):
         failures.append(f'{rel} is missing an html lang attribute.')
     if not TITLE_PATTERN.search(text):
