@@ -1,6 +1,7 @@
 {
   "name": "Foculoom",
   "short_name": "Foculoom",
+  "lang": "en",
   "description": "Calm, accessible software from Foculoom, starting with Focus & Tasks.",
   "start_url": "/",
   "display": "standalone",
