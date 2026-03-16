@@ -37,6 +37,7 @@ OTHER_REQUIRED = [
     ROOT / 'assets' / 'og-foculoom.png',
     ROOT / 'assets' / 'og-focus-tasks.png',
     SITE_MANIFEST,
+    ROOT / 'CNAME',
     ROOT / 'robots.txt',
     ROOT / 'sitemap.xml',
 ]
