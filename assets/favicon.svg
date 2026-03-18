@@ -1,7 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title>Foculoom</title>
-  <rect width="64" height="64" rx="16" fill="#0c0a09" />
-  <rect x="14" y="14" width="36" height="36" rx="12" fill="#14b8a6" opacity="0.18" />
-  <path d="M24 18h22v8H32v8h12v8H32v12h-8V18z" fill="#fafaf9" />
-  <rect x="44" y="18" width="6" height="28" rx="3" fill="#14b8a6" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title>FOCULOOM app icon</title>
+  <desc>FOCULOOM app icon tile using the prior frontal abstract symbol with a black frontal notch on a dark rounded square.</desc>
+  <defs>
+    <mask id="app-symbol-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="300">
+      <rect width="320" height="300" fill="black"/>
+      <g fill="white"><circle cx="98" cy="128" r="68"/>
+      <circle cx="164" cy="92" r="82"/>
+      <circle cx="232" cy="124" r="68"/>
+      <rect x="72" y="138" width="204" height="114" rx="57"/></g>
+      <rect x="222" y="34" width="28" height="90" rx="14" fill="black"/>
+    </mask>
+    <clipPath id="app-notch-clip" clipPathUnits="userSpaceOnUse">
+      <rect x="222" y="34" width="28" height="90" rx="14"/>
+    </clipPath>
+  </defs>
+  <rect x="80" y="80" width="864" height="864" rx="208" fill="#17181F"/>
+  <g transform="translate(176 202) scale(2.1)">
+  <g>
+    <g mask="url(#app-symbol-mask)" fill="#FFFFFF"><circle cx="98" cy="128" r="68"/>
+      <circle cx="164" cy="92" r="82"/>
+      <circle cx="232" cy="124" r="68"/>
+      <rect x="72" y="138" width="204" height="114" rx="57"/></g>
+    <rect x="214" y="44" width="42" height="88" rx="21" fill="#000000" clip-path="url(#app-notch-clip)"/>
+  </g>
+  </g>
 </svg>

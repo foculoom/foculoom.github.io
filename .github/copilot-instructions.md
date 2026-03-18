@@ -33,6 +33,7 @@ python3 -m http.server --directory _site 8000
 - Assume any new text may be read by end users.
 - Prefer end-product language over planning, rollout, or launch-sequence language.
 - Keep references public-safe and avoid internal filesystem paths or sibling-repo notes.
+- Treat the shared header logo and site icons as canonical Foculoom brand surfaces. Do not swap in ad-hoc initials, alternate local marks, or product-specific icons for the company-level site shell.
 - Preserve the existing validation/build workflow and use it after changes.
 
 ## Guardrails
