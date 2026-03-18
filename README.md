@@ -22,6 +22,7 @@ This repo hosts the public GitHub Pages site for `foculoom.com`. The current dir
 - It is fine to describe the company's product lanes at a high level, but do not present any product as already released unless the live store link exists on the site.
 - Unreleased apps and games should be clearly marked as coming soon.
 - Avoid exact pricing, medical claims, wellness framing, AI claims, collaboration claims, and child-directed flagship framing unless those details are explicitly confirmed.
+- Treat the shared Foculoom header lockup and site icons as canonical company-brand surfaces. Preserve their geometry and update them consistently instead of inventing alternate local mark treatments for the site shell.
 
 ## Local workflow
 
