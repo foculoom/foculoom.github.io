@@ -201,3 +201,47 @@
 **Spec refs:** FR-11, FR-12
 **Description:** Run `python3 scripts/build_site.py && python3 scripts/validate_site.py` locally and confirm both exit 0 with no errors. Optionally serve `_site/` with `python3 -m http.server --directory _site 8000` and manually spot-check 3 product pages and the home page.
 **Done when:** Both scripts exit 0. Spot-check confirms product pages load correctly and navigation links work.
+
+---
+
+## T021 — Visual validation: full site screenshot review
+
+**Status:** pending
+**Depends on:** T020
+**Spec refs:** FR-01–FR-12 (012-A spec increment)
+
+Build the site, serve it locally, capture screenshots of all key pages, and examine for layout issues, broken links, placeholder accuracy, and SEO meta correctness.
+
+**Steps:**
+1. `mkdir -p .specify/validation/`
+2. Build and serve:
+   ```bash
+   python3 scripts/build_site.py
+   python3 -m http.server --directory _site 8000 &
+   SERVER_PID=$!
+   sleep 2
+   ```
+3. Capture the index/home page:
+   `screencapture -x ".specify/validation/T021-index-$(date +%Y%m%d-%H%M).png"`
+4. For each product page that exists (check `_site/` for subdirectories), open in browser or capture:
+   `screencapture -x ".specify/validation/T021-[product]-$(date +%Y%m%d-%H%M).png"`
+5. Stop the server: `kill $SERVER_PID 2>/dev/null || true`
+6. View each screenshot and check for:
+   - All product pages render with correct layout (no overflow, no missing CSS)
+   - Steam wishlist button placeholders are visually disabled/greyed out (no active links to non-existent Steam pages)
+   - App Store badge for BubblePop is placeholder (no live link yet)
+   - "Coming Soon" / discovery state messaging for Focus & Tasks is present and accurate
+   - Navigation links work across pages (no 404 destinations visible)
+   - Steam Next Fest section present on relevant page(s)
+   - Mailing list form embed placeholder visible
+   - No internal links pointing to pages that don't exist in `_site/`
+   - Open Graph meta tags present in HTML (check page source): og:title, og:description, og:image
+7. Also validate HTML: `python3 scripts/validate_site.py`
+8. Fix any P0 issues (broken layout, live links to non-existent store pages) before marking done
+
+**Done when:**
+- Screenshots of index + at least 3 product pages saved to `.specify/validation/`
+- `python3 scripts/validate_site.py` passes with no errors
+- No live/active store links (Steam or App Store) pointing to non-existent listings
+- Open Graph meta tags verified in at least one page's HTML source
+- A 3–5 sentence validation note appended describing what was verified
