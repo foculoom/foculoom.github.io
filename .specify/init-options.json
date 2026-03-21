@@ -1,0 +1,9 @@
+{
+  "version": "0.3.1",
+  "here": true,
+  "product": "foculoom.github.io",
+  "type": "website",
+  "description": "Foculoom public marketing website — pre-launch static site for all Foculoom products",
+  "spec_prefix": "012",
+  "owner": "foculoom"
+}
