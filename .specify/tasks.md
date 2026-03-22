@@ -234,11 +234,13 @@
 
 ## T018 — validate_site.py update for new pages
 
-**Status:** pending
+**Status:** done
 **Depends on:** T001, T003, T004, T005, T006, T007, T008, T009, T010, T011
 **Spec refs:** FR-11
 **Description:** Extend `scripts/validate_site.py` to assert: (1) all 9 product page `index.html` files exist in the source tree, (2) all internal `<a href>` links across all pages resolve to an existing file, and (3) `sitemap.xml` contains entries for all product pages. The script must exit non-zero with a descriptive error message if any assertion fails.
 **Done when:** `python3 scripts/validate_site.py` passes (exit 0) on the complete site and fails with a clear error if a product page is missing or a link is broken.
+
+**Completion note (2026-03-22):** `validate_site.py` already implements all three required assertions: (1) All 9 product page `index.html` files are listed in `HTML_FILES` and checked for existence with `if not path.exists(): failures.append(f'Missing required file: ...')` — exits non-zero with descriptive error on failure. (2) All internal `<a href>` and `src` links are extracted via `HREF_PATTERN` and resolved via `resolve_local_target()`, with missing targets appended to `failures`. (3) `sitemap.xml` is parsed and checked against `EXPECTED_URLS` — any missing URLs trigger a descriptive failure. Script exits 1 with all errors listed when any assertion fails. `python3 scripts/validate_site.py` passes with exit 0.
 
 ---
 
