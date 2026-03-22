@@ -210,11 +210,13 @@
 
 ## T016 — sitemap.xml update
 
-**Status:** pending
+**Status:** done
 **Depends on:** T003, T004, T005, T006, T007, T008, T009, T010, T011
 **Spec refs:** FR-09
 **Description:** Update `sitemap.xml` to include `<url>` entries for all new product pages. Use `https://foculoom.com/[slug]/` URL format. Set `<changefreq>monthly</changefreq>` and a current `<lastmod>` date. Validate the XML is well-formed.
 **Done when:** `sitemap.xml` includes all 9 new product pages (7 Steam + bubblepop + focus-tasks), XML is valid, and the file is included in `_site/` after `build_site.py`.
+
+**Completion note (2026-03-22):** `sitemap.xml` contains all 9 product page entries: focus-tasks, one-clear-path, stillwater, sortable, inkwell, tidekeeper, quiet-room, lantern-walk, bubblepop — all using `https://foculoom.com/[slug]/` format with `<changefreq>monthly</changefreq>` and `<lastmod>2026-03-22T00:00:00Z</lastmod>`. XML validated well-formed via Python's ElementTree. File is included in `build_site.py` FILES list and confirmed present in `_site/` after build. `validate_site.py` asserts all expected sitemap URLs are present and passes.
 
 ---
 
