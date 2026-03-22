@@ -30,11 +30,25 @@
 
 ## T002 — Create product page template (shared HTML partial)
 
-**Status:** pending
+**Status:** done
 **Depends on:** T001
 **Spec refs:** FR-01, FR-02, FR-04
 **Description:** Create a shared HTML template file (e.g., `templates/product-page.html`) that all 8 product pages derive from. The template includes: `<head>` with placeholder OG meta tags, consistent `<nav>`, product name H1, tagline, description paragraph, CTA button section (placeholder), Steam widget comment marker, mailing list form embed placeholder, Steam Next Fest section placeholder, and footer.
 **Done when:** Template file exists and renders correctly in a browser. It includes all structural placeholders (Steam widget comment, mailing list embed, OG tags) so each product page only needs to fill in content.
+
+**Completion note (2026-03-22):** Template created at `templates/product-page.html` (164 lines). Includes:
+- Full HTML5 document structure with all required Foculoom branding elements (header, nav, footer)
+- Complete `<head>` with placeholder Open Graph meta tags (og:title, og:description, og:image, og:url, og:locale)
+- Twitter Card meta tags for social preview
+- JSON-LD structured data (SoftwareApplication schema)
+- All required Foculoom company contact info (phone, email, address) in support and footer sections
+- Structural placeholders:
+  - `<!-- STEAM_WIDGET: [[PRODUCT_SLUG]] -->` comment marker for Steam embed (Steam games only)
+  - `<!-- MAILING_LIST_EMBED -->` placeholder for mailing list form
+  - `<!-- STEAM_NEXT_FEST -->` marker for Steam Next Fest section
+- Template variables (marked as [[VARIABLE]]) for: product title, slug, tagline, description, canonical URL, OG image, platform badges
+- Consistent navigation, hero section with status badge, CTA buttons (disabled for pre-launch), and support/company info sections
+- Matches existing design language from focus-tasks/index.html (hero, card, actions, split layout classes)
 
 ---
 
