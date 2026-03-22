@@ -54,81 +54,97 @@
 
 ## T003 — One Clear Path product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `one-clear-path/index.html` for the One Clear Path Steam game. Include: game name, 1-line tagline, 1-paragraph description, disabled placeholder Steam wishlist button, `<!-- STEAM_WIDGET: one-clear-path -->` comment marker, mailing list embed, Steam Next Fest section, and Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/one-clear-path/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `one-clear-path/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T004 — Stillwater product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `stillwater/index.html` for the Stillwater Steam game. Same structure as T003: name, tagline, description, disabled Steam wishlist button, `<!-- STEAM_WIDGET: stillwater -->` comment marker, mailing list embed, Steam Next Fest section, Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/stillwater/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `stillwater/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T005 — Sortable product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `sortable/index.html` for the Sortable Steam game. Same structure: name, tagline, description, disabled Steam wishlist button, `<!-- STEAM_WIDGET: sortable -->` comment marker, mailing list embed, Steam Next Fest section, Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/sortable/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `sortable/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T006 — Inkwell product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `inkwell/index.html` for the Inkwell Steam game. Same structure: name, tagline ("Restore lost words. Recover meaning."), description, disabled Steam wishlist button, `<!-- STEAM_WIDGET: inkwell -->` comment marker, mailing list embed, Steam Next Fest section, Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/inkwell/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `inkwell/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T007 — Tidekeeper product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `tidekeeper/index.html` for the Tidekeeper Steam game. Same structure: name, tagline, description, disabled Steam wishlist button, `<!-- STEAM_WIDGET: tidekeeper -->` comment marker, mailing list embed, Steam Next Fest section, Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/tidekeeper/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `tidekeeper/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T008 — Quiet Room product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `quiet-room/index.html` for the Quiet Room Steam game. Same structure: name, tagline, description, disabled Steam wishlist button, `<!-- STEAM_WIDGET: quiet-room -->` comment marker, mailing list embed, Steam Next Fest section, Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/quiet-room/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `quiet-room/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T009 — Lantern Walk product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-01, FR-05, FR-06, FR-07, FR-08
 **Description:** Create `lantern-walk/index.html` for the Lantern Walk Steam game. Same structure: name, tagline, description, disabled Steam wishlist button, `<!-- STEAM_WIDGET: lantern-walk -->` comment marker, mailing list embed, Steam Next Fest section, Open Graph meta tags. Add to site navigation.
 **Done when:** Page exists at `/lantern-walk/`, renders correctly, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
 
+**Completion note (2026-03-22):** Page created at `lantern-walk/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, Steam widget comment marker, mailing list placeholder, and Steam Next Fest section. `build_site.py` and `validate_site.py` both pass.
+
 ---
 
 ## T010 — BubblePop iOS product page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-02, FR-08
 **Description:** Create `bubblepop/index.html` for the BubblePop iOS app. Include: app name, tagline, description, age appropriateness note, placeholder App Store badge (disabled/greyed until listing is live), and Open Graph meta tags. No Steam widget — this is an iOS app. Add to site navigation.
 **Done when:** Page exists at `/bubblepop/`, renders correctly with placeholder App Store badge, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
+
+**Completion note (2026-03-22):** Page created at `bubblepop/index.html` using product-page.html template. Includes complete OG/Twitter/JSON-LD meta tags, iOS platform badge, mailing list placeholder. No Steam widget (iOS app only). `build_site.py` and `validate_site.py` both pass.
 
 ---
 
@@ -220,13 +236,13 @@
 
 ## T019 — build_site.py update for new pages
 
-**Status:** pending
+**Status:** done
 **Depends on:** T003, T004, T005, T006, T007, T008, T009, T010, T011
 **Spec refs:** FR-12
 **Description:** Extend `scripts/build_site.py` to copy all new product page directories (`one-clear-path/`, `stillwater/`, `sortable/`, `inkwell/`, `tidekeeper/`, `quiet-room/`, `lantern-walk/`, `bubblepop/`, `focus-tasks/`) into `_site/`. Verify the script preserves directory structure and copies all assets (CSS, images) referenced from product pages.
 **Done when:** `python3 scripts/build_site.py` exits 0 and `_site/` contains all product page directories with their `index.html` files.
 
-**Partial completion note:** `focus-tasks/` is already in `build_site.py` DIRECTORIES list and is copied to `_site/` on every build. The 7 Steam game directories and `bubblepop/index.html` are not yet included — blocked on T003–T010 (pages must be created first).
+**Completion note (2026-03-22):** Updated `build_site.py` DIRECTORIES list to include all 8 product game directories plus focus-tasks. All directories are copied to `_site/` correctly. `python3 scripts/build_site.py && python3 scripts/validate_site.py` both pass.
 
 ---
 
