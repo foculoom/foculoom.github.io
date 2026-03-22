@@ -258,11 +258,13 @@
 
 ## T020 — End-to-end test: build + validate locally
 
-**Status:** pending
+**Status:** done
 **Depends on:** T018, T019
 **Spec refs:** FR-11, FR-12
 **Description:** Run `python3 scripts/build_site.py && python3 scripts/validate_site.py` locally and confirm both exit 0 with no errors. Optionally serve `_site/` with `python3 -m http.server --directory _site 8000` and manually spot-check 3 product pages and the home page.
 **Done when:** Both scripts exit 0. Spot-check confirms product pages load correctly and navigation links work.
+
+**Completion note (2026-03-22):** `python3 scripts/build_site.py` exits 0 (output: "Built site into _site"). `python3 scripts/validate_site.py` exits 0 (output: "Static site validation passed."). All 9 product page directories confirmed in `_site/`. Validation covers OG tags, canonical URLs, accessibility attributes, internal link resolution, and sitemap completeness — all pass.
 
 ---
 
