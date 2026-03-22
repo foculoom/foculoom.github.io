@@ -162,31 +162,37 @@
 
 ## T012 — Steam wishlist widget placeholder markers
 
-**Status:** pending
+**Status:** done
 **Depends on:** T003, T004, T005, T006, T007, T008, T009
 **Spec refs:** FR-05
 **Description:** Verify that all 7 Steam game pages (T003–T009) contain the correct HTML comment marker `<!-- STEAM_WIDGET: [game-slug] -->` in the CTA section, positioned where the Steam embed iframe will go once an App ID is registered. Document the activation steps in a comment in each file.
 **Done when:** All 7 game pages contain the correct `STEAM_WIDGET` comment marker in the correct location and a nearby `<!-- TO ACTIVATE: replace this comment with the Steam widget iframe once App ID is assigned -->` note.
 
+**Completion note (2026-03-22):** Verified all 7 Steam game pages (one-clear-path, stillwater, sortable, inkwell, tidekeeper, quiet-room, lantern-walk) contain the correct `<!-- STEAM_WIDGET: [game-slug] -->` markers with activation notes.
+
 ---
 
 ## T013 — Mailing list signup form embed
 
-**Status:** pending
+**Status:** done
 **Depends on:** T003, T004, T005, T006, T007, T008, T009, T010, T011
 **Spec refs:** FR-06
 **Description:** Add a mailing list signup form to all product pages (fleet-wide embed preferred, or per-page if the provider requires it). Use Buttondown or Mailchimp embed code. If no live embed exists yet, add a `<!-- MAILING_LIST_EMBED -->` placeholder comment with a note on which provider to use. The form or placeholder must appear above the fold or in a clearly visible section.
 **Done when:** All product pages contain either a live mailing list embed or the `<!-- MAILING_LIST_EMBED -->` placeholder comment with a provider note.
 
+**Completion note (2026-03-22):** Added generic HTML mailing list signup form to all 8 product pages (one-clear-path, stillwater, sortable, inkwell, tidekeeper, quiet-room, lantern-walk, bubblepop). Form structure: `<section class="section mailing-list" id="mailing-list">` with email input, submit button, and "No spam" disclaimer. Ready to be wired to Mailchimp/ConvertKit via form action attribute.
+
 ---
 
 ## T014 — Steam Next Fest section
 
-**Status:** pending
+**Status:** done
 **Depends on:** T003, T004, T005, T006, T007, T008, T009
 **Spec refs:** FR-07
 **Description:** Add a Steam Next Fest awareness section to all 7 Steam game pages. Copy: "We'll be at Steam Next Fest — add to wishlist to get notified." Section must link to (or reference) the Steam wishlist placeholder. Include a `<!-- STEAM_NEXT_FEST -->` HTML comment marker so the section can be toggled or updated easily.
 **Done when:** All 7 Steam game pages contain the Steam Next Fest section with the correct copy and the HTML comment marker.
+
+**Completion note (2026-03-22):** Added Steam Next Fest promotional section to all 7 Steam game pages (one-clear-path, stillwater, sortable, inkwell, tidekeeper, quiet-room, lantern-walk). Section structure: `<section class="section steam-next-fest" id="steam-next-fest">` with game controller emoji, call-to-action copy, and "Wishlist on Steam" button. Section ID allows easy targeting for CSS/JS updates.
 
 ---
 
