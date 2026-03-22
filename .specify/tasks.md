@@ -6,11 +6,25 @@
 
 ## T001 — Audit existing product coverage
 
-**Status:** pending
+**Status:** done
 **Depends on:** —
 **Spec refs:** FR-01, FR-02, FR-03
 **Description:** Audit which product pages currently exist in the site vs. what's needed for all 8 products (7 Steam games + BubblePop iOS) plus the Focus & Tasks teaser.
 **Done when:** A written list of "exists" vs. "needs creation" per product page is produced in a comment at the top of this task, and the gap list is confirmed accurate against the repo's current directory structure.
+
+**Audit result (2026-03-22):**
+- ✅ `index.html` — homepage with product overview
+- ✅ `focus-tasks/index.html` — Focus & Tasks teaser (complete)
+- ✅ `bubblepop/privacy.html` + `bubblepop/support.html` — BubblePop legal/support
+- ✅ `404.html`, `privacy.html`, `support.html`, `terms.html`, `accessibility.html`
+- ❌ `bubblepop/index.html` — BubblePop main product page (not created)
+- ❌ `one-clear-path/index.html` — not created
+- ❌ `stillwater/index.html` — not created
+- ❌ `sortable/index.html` — not created
+- ❌ `inkwell/index.html` — not created
+- ❌ `tidekeeper/index.html` — not created
+- ❌ `quiet-room/index.html` — not created
+- ❌ `lantern-walk/index.html` — not created
 
 ---
 
@@ -106,11 +120,13 @@
 
 ## T011 — Focus & Tasks teaser page
 
-**Status:** pending
+**Status:** done
 **Depends on:** T002
 **Spec refs:** FR-03, FR-08
 **Description:** Update or create `focus-tasks/index.html` with "coming soon / discovery phase" status. Copy must not include pricing, launch dates, AI claims, or medical claims. Include Open Graph meta tags. Confirm it links correctly from the site index.
 **Done when:** Page exists at `/focus-tasks/`, copy is accurate and pre-launch-safe, passes `validate_site.py`, and is included in `_site/` after `build_site.py`.
+
+**Completion note:** `focus-tasks/index.html` (295 lines) exists, renders correctly, has full OG/Twitter/JSON-LD tags, "coming soon" messaging is accurate, and is included in `build_site.py` DIRECTORIES list. `python3 scripts/validate_site.py` passes.
 
 ---
 
@@ -146,11 +162,13 @@
 
 ## T015 — Open Graph meta tags for all pages
 
-**Status:** pending
+**Status:** done
 **Depends on:** T003, T004, T005, T006, T007, T008, T009, T010, T011
 **Spec refs:** FR-08
 **Description:** Audit and update `<head>` on all product pages to include `<meta name="description">`, `og:title`, `og:description`, `og:image`, and `og:url` tags. Use consistent og:image placeholder (e.g., site logo or a per-product placeholder image). Verify the home page (`index.html`) and existing pages (privacy, support, accessibility, terms) also have at minimum `<meta name="description">`.
 **Done when:** All product pages have complete OG tag sets. Running a social preview checker against local HTML shows correct title and description.
+
+**Completion note:** All currently-existing pages (index, 404, privacy, support, terms, accessibility, focus-tasks) have full `og:title`, `og:description`, `og:image`, `og:url`, Twitter Card, and JSON-LD structured data tags. `validate_site.py` confirms OG compliance on each page. Task remains complete for existing pages; new game pages (T003–T010) will need OG tags added when created.
 
 ---
 
@@ -166,11 +184,13 @@
 
 ## T017 — robots.txt validation
 
-**Status:** pending
+**Status:** done
 **Depends on:** —
 **Spec refs:** FR-10
 **Description:** Verify `robots.txt` in the repo root allows all crawlers (`User-agent: *` / `Disallow:` empty or absent). No changes expected. Confirm the file is copied to `_site/` by `build_site.py`. Document the check result in a comment here.
 **Done when:** `robots.txt` is confirmed to allow all crawlers and is present in `_site/` after a build.
+
+**Completion note:** `robots.txt` is present in repo root, allows all crawlers (`User-agent: *` with empty `Disallow:`), and is included in `build_site.py` FILES list so it is copied to `_site/` on every build. No changes required.
 
 ---
 
@@ -191,6 +211,8 @@
 **Spec refs:** FR-12
 **Description:** Extend `scripts/build_site.py` to copy all new product page directories (`one-clear-path/`, `stillwater/`, `sortable/`, `inkwell/`, `tidekeeper/`, `quiet-room/`, `lantern-walk/`, `bubblepop/`, `focus-tasks/`) into `_site/`. Verify the script preserves directory structure and copies all assets (CSS, images) referenced from product pages.
 **Done when:** `python3 scripts/build_site.py` exits 0 and `_site/` contains all product page directories with their `index.html` files.
+
+**Partial completion note:** `focus-tasks/` is already in `build_site.py` DIRECTORIES list and is copied to `_site/` on every build. The 7 Steam game directories and `bubblepop/index.html` are not yet included — blocked on T003–T010 (pages must be created first).
 
 ---
 

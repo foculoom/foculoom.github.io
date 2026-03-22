@@ -35,11 +35,13 @@ python3 -m http.server --directory _site 8000
 ## Project Structure
 
 ```text
-index.html, *.html  Public site pages
-focus-tasks/        Product-specific public landing page content
+index.html, *.html  Public site pages (homepage, 404, privacy, support, terms, accessibility)
+focus-tasks/        Focus & Tasks product landing page (complete)
+bubblepop/          BubblePop iOS app support pages (privacy.html, support.html)
 assets/             Public CSS, icons, images, and manifest files
-scripts/            Local validation and build helpers
-_site/              Generated publishable artifact
+scripts/            Local validation and build helpers (validate_site.py, build_site.py)
+_site/              Generated publishable artifact (output of build_site.py)
+.specify/           Internal planning: spec.md, tasks.md, plan.md
 .github/            GitHub config, instructions, agents, and Copilot guidance
 README.md           Human-readable source of truth for public-site guardrails
 ```
