@@ -270,7 +270,7 @@
 
 ## T021 — Visual validation: full site screenshot review
 
-**Status:** pending
+**Status:** done
 **Depends on:** T020
 **Spec refs:** FR-01–FR-12 (012-A spec increment)
 
@@ -315,3 +315,6 @@ Build the site, serve it locally, capture screenshots of all key pages, and exam
 - No live/active store links (Steam or App Store) pointing to non-existent listings
 - Open Graph meta tags verified in at least one page's HTML source
 - A 3–5 sentence validation note appended describing what was verified
+
+**Validation note (completed 2026-03-22):**
+Screenshots captured for index, one-clear-path, bubblepop, and stillwater pages (saved to `.specify/validation/T021-*-20260322-1530.png`). `python3 scripts/validate_site.py` passes with exit 0. A P0 bug was found and fixed: all 8 Steam game product pages had malformed HTML comment blocks where inner `<!-- MARKER -->` sequences caused premature `-->` comment termination, making documentation text render as visible page content. Fixed across all 8 pages and `templates/product-page.html`. Open Graph meta tags confirmed present in one-clear-path's HTML source (og:title, og:description, og:image, og:url). No live store links detected (all Steam buttons are placeholder/disabled). Pages render correctly with expected layout, fog-of-war branding, and discovery state messaging.
