@@ -65,3 +65,12 @@ README.md           Human-readable source of truth for public-site guardrails
 - ⚠️ Ask first: changes to `.github/workflows/` or deployment behavior
 - 🚫 Never: add secrets, internal repo paths, private notes, or unpublished operational details
 - 🚫 Never: modify CI workflows as part of this task
+
+## QA Capture
+
+For visual validation of this repo's website, always capture the browser window region — never the full screen.
+
+**Rules:**
+- Open site in browser (`open http://localhost:8000`), detect window bounds via Quartz (`kCGWindowOwnerName` matches your browser process name), then: `screencapture -R lx,ly,w,h -x FILE.png`
+- **Never** use `screencapture -x FILE` alone — captures full 4112×2658 Retina screen, not the browser window
+- Full Quartz window-detection recipe: `/foculoom/games/CAPTURE.md` §2 (substitute browser process name for "godot")

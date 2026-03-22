@@ -221,10 +221,16 @@ Build the site, serve it locally, capture screenshots of all key pages, and exam
    SERVER_PID=$!
    sleep 2
    ```
-3. Capture the index/home page:
-   `screencapture -x ".specify/validation/T021-index-$(date +%Y%m%d-%H%M).png"`
-4. For each product page that exists (check `_site/` for subdirectories), open in browser or capture:
-   `screencapture -x ".specify/validation/T021-[product]-$(date +%Y%m%d-%H%M).png"`
+3. Open index page in browser and capture (see `/foculoom/games/CAPTURE.md` §2 for Quartz window-detection recipe; substitute your browser process name for "godot"):
+   ```bash
+   open http://localhost:8000
+   sleep 3
+   # Detect browser window position via Quartz, then:
+   screencapture -R lx,ly,w,h -x ".specify/validation/T021-index-$(date +%Y%m%d-%H%M).png"
+   ```
+   Do NOT use `screencapture -x` alone — captures full 4112×2658 Retina screen, not the browser window.
+4. For each product page that exists (check `_site/` for subdirectories), navigate browser and capture:
+   `screencapture -R lx,ly,w,h -x ".specify/validation/T021-[product]-$(date +%Y%m%d-%H%M).png"`
 5. Stop the server: `kill $SERVER_PID 2>/dev/null || true`
 6. View each screenshot and check for:
    - All product pages render with correct layout (no overflow, no missing CSS)
