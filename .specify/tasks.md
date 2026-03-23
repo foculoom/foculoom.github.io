@@ -318,3 +318,55 @@ Build the site, serve it locally, capture screenshots of all key pages, and exam
 
 **Validation note (completed 2026-03-22):**
 Screenshots captured for index, one-clear-path, bubblepop, and stillwater pages (saved to `.specify/validation/T021-*-20260322-1530.png`). `python3 scripts/validate_site.py` passes with exit 0. A P0 bug was found and fixed: all 8 Steam game product pages had malformed HTML comment blocks where inner `<!-- MARKER -->` sequences caused premature `-->` comment termination, making documentation text render as visible page content. Fixed across all 8 pages and `templates/product-page.html`. Open Graph meta tags confirmed present in one-clear-path's HTML source (og:title, og:description, og:image, og:url). No live store links detected (all Steam buttons are placeholder/disabled). Pages render correctly with expected layout, fog-of-war branding, and discovery state messaging.
+
+---
+
+## Phase 2 — Post-Launch Improvements (012-B)
+
+### T022 — Document Mailing List Integration Points
+**Status:** pending · **Priority:** P2 · **Depends on:** —  
+**Spec refs:** FR-13  
+**Done when:**
+- All product page forms with `action="#"` are documented in a comment explaining the integration point
+- A brief note in this task describes the form field names and expected POST format
+- Provider selection is deferred — task is done when integration is documented, not wired
+
+### T023 — Add Game Screenshots to Product Pages
+**Status:** pending · **Priority:** P2 · **Depends on:** —  
+**Spec refs:** FR-14  
+**Done when:**
+- Each product page includes 1–3 `<img>` tags showing gameplay screenshots
+- Screenshots are sourced from each game's `qa/screenshots/` directory and copied to `assets/screenshots/`
+- Images are optimized (<100KB each) and have descriptive `alt` text
+
+### T024 — Activate Steam Widget on OCP Page
+**Status:** pending · **Priority:** P3 · **Depends on:** —  
+**Spec refs:** FR-15  
+**Done when:**
+- OCP product page contains a working Steam widget iframe with App ID 4547350
+- Widget is visible and functional (loads Steam store mini-page)
+- Fallback text shown if iframe fails to load
+
+### T025 — Update Product Status Badges
+**Status:** pending · **Priority:** P2 · **Depends on:** —  
+**Spec refs:** FR-16  
+**Done when:**
+- Focus & Tasks page shows "In Research" qualifier (not presented as a developed product)
+- OCP badge reflects actual Steam store status
+- validate_site.py still passes
+
+### T026 — Clean Up Homepage Utility Apps Card
+**Status:** pending · **Priority:** P3 · **Depends on:** —  
+**Spec refs:** FR-17  
+**Done when:**
+- "Utility apps" card is either removed or replaced with meaningful content
+- Homepage layout remains balanced after change
+- No broken links or orphaned references
+
+### T027 — Generate OG Images from Game Screenshots
+**Status:** pending · **Priority:** P3 · **Depends on:** T023  
+**Spec refs:** FR-14  
+**Done when:**
+- OG images for each game are generated from actual gameplay screenshots (not placeholder crops)
+- Each OG image is <100KB and 1200×630 or similar standard OG dimensions
+- Meta tags reference the new OG images

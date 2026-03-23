@@ -115,3 +115,32 @@
 5. All product pages have Open Graph tags sufficient for a correct social preview.
 6. `sitemap.xml` includes all new product page URLs.
 7. Steam wishlist widget placeholder comment markers are present on all 7 Steam game pages, ready to activate when App IDs are registered.
+
+---
+
+## Phase 2: Post-Launch Improvements (012-B)
+
+> Added: 2026-03-23
+
+### FR-13: Mailing List Integration
+The mailing list signup forms on all product pages must be wired to an email service provider.
+Currently all forms have `action="#"` (non-functional). Provider selection deferred — document
+the integration point and mark ready for wiring when provider is chosen.
+
+### FR-14: Game Screenshot Galleries
+Each product page should include 1–3 gameplay screenshots from the game's `qa/screenshots/`
+directory. Screenshots provide visual context that pure text descriptions cannot convey.
+
+### FR-15: Steam Widget Activation
+When OCP's Steam store page is publicly accessible, embed the Steam widget iframe on the
+OCP product page. The widget placeholder comment already exists in the HTML.
+
+### FR-16: Status Badge Accuracy
+Product page status indicators must accurately reflect each game's state:
+- OCP: "Available on Steam" or "Coming to Steam" (based on store page status)
+- Focus & Tasks: "In Research" (not implied as a developed product)
+- Other games: "Coming to Steam"
+
+### FR-17: Homepage Card Accuracy
+The "Utility apps" card on the homepage is a placeholder with no link. Either remove it
+or replace with a meaningful card when a utility app product is ready.
