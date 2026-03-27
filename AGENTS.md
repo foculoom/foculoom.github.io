@@ -36,8 +36,8 @@ python3 -m http.server --directory _site 8000
 
 ```text
 index.html, *.html  Public site pages (homepage, 404, privacy, support, terms, accessibility)
-focus-tasks/        Focus & Tasks product landing page (complete)
-bubblepop/          BubblePop iOS app support pages (privacy.html, support.html)
+dash/               Foculoom Dash product page (the primary product)
+one-clear-path/     Redirect page to Steam store listing
 assets/             Public CSS, icons, images, and manifest files
 scripts/            Local validation and build helpers (validate_site.py, build_site.py)
 _site/              Generated publishable artifact (output of build_site.py)

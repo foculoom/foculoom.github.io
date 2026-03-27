@@ -19,15 +19,8 @@ FILES = [
 ]
 DIRECTORIES = [
     'assets',
-    'focus-tasks',
+    'dash',
     'one-clear-path',
-    'stillwater',
-    'sortable',
-    'inkwell',
-    'tidekeeper',
-    'quiet-room',
-    'lantern-walk',
-    'bubblepop',
 ]
 REQUIRED_OUTPUTS = [*FILES, '.nojekyll']
 

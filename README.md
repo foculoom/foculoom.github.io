@@ -4,9 +4,10 @@ Static website for Foculoom.
 
 This repo hosts the public GitHub Pages site for `foculoom.com`. The current direction is:
 
-- a company-level homepage that explains Foculoom's mission, apps/games, and platform direction in one place
-- focused public product pages inside the same site, including `Focus & Tasks`
-- public support, privacy, accessibility, and legal pages that stay aligned with the live site scope
+- a company-level homepage centered on **Foculoom Dash**, our first product — a colorful endless runner for kids
+- a dedicated product page at `/dash/` with gameplay details, platform info, and support links
+- public support, privacy, accessibility, and legal pages aligned with Foculoom Dash
+- a redirect page at `/one-clear-path/` pointing to the Steam store listing
 
 ## Customer-facing content workflow
 
