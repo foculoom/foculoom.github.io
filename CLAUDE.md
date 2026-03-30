@@ -5,7 +5,7 @@ This file provides context for AI coding agents working on the Foculoom website.
 ## Site Overview
 
 **foculoom.com** is the public marketing website for Foculoom LLC. It centers on
-**Foculoom Dash** — a colorful endless runner for kids. Static HTML deployed via
+**Skiplet by Foculoom** — a colorful endless runner for kids. Static HTML deployed via
 GitHub Pages.
 
 ## Tech Stack
@@ -20,10 +20,11 @@ GitHub Pages.
 ## Site Structure
 
 ```
-index.html                  — Homepage centered on Foculoom Dash
-dash/index.html             — Foculoom Dash product page
+index.html                  — Homepage centered on Skiplet by Foculoom
+skiplet/index.html          — Skiplet by Foculoom product page
+dash/index.html             — Redirect stub → /skiplet/
 one-clear-path/index.html   — Redirect to Steam store listing
-privacy.html                — Privacy policy (covers Foculoom Dash + website)
+privacy.html                — Privacy policy (covers Skiplet + website)
 terms.html                  — Terms of service
 accessibility.html          — Accessibility statement
 support.html                — Support/contact page
@@ -41,7 +42,7 @@ templates/                  — Product page template (reference only)
 4. No manufactured urgency (no "limited time" framing)
 5. No dark patterns in CTAs
 6. Privacy-first: no third-party analytics or tracking scripts
-7. Foculoom Dash is for kids ages 6+ — COPPA-compliant, no data collection
+7. Skiplet is for kids ages 6+ — COPPA-compliant, no data collection
 
 ## Code Quality
 

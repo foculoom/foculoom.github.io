@@ -11,7 +11,7 @@ SITE_CSS = ROOT / 'assets' / 'site.css'
 SITE_MANIFEST = ROOT / 'assets' / 'site.webmanifest'
 EXPECTED_PAGE_URLS = {
     ROOT / 'index.html': 'https://foculoom.com/',
-    ROOT / 'dash' / 'index.html': 'https://foculoom.com/dash/',
+    ROOT / 'skiplet' / 'index.html': 'https://foculoom.com/skiplet/',
     ROOT / 'support.html': 'https://foculoom.com/support.html',
     ROOT / 'privacy.html': 'https://foculoom.com/privacy.html',
     ROOT / 'terms.html': 'https://foculoom.com/terms.html',
@@ -20,7 +20,7 @@ EXPECTED_PAGE_URLS = {
 }
 HTML_FILES = [
     ROOT / 'index.html',
-    ROOT / 'dash' / 'index.html',
+    ROOT / 'skiplet' / 'index.html',
     ROOT / 'support.html',
     ROOT / 'privacy.html',
     ROOT / 'terms.html',

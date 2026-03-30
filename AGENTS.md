@@ -36,7 +36,8 @@ python3 -m http.server --directory _site 8000
 
 ```text
 index.html, *.html  Public site pages (homepage, 404, privacy, support, terms, accessibility)
-dash/               Foculoom Dash product page (the primary product)
+skiplet/            Skiplet by Foculoom product page (the primary product)
+dash/               Redirect stub → /skiplet/
 one-clear-path/     Redirect page to Steam store listing
 assets/             Public CSS, icons, images, and manifest files
 scripts/            Local validation and build helpers (validate_site.py, build_site.py)
