@@ -4,9 +4,9 @@ Static website for Foculoom.
 
 This repo hosts the public GitHub Pages site for `foculoom.com`. The current direction is:
 
-- a company-level homepage centered on **Foculoom Dash**, our first product — a colorful endless runner for kids
-- a dedicated product page at `/dash/` with gameplay details, platform info, and support links
-- public support, privacy, accessibility, and legal pages aligned with Foculoom Dash
+- a company-level homepage centered on **Skiplet by Foculoom**, our first product — a colorful endless runner for kids
+- a dedicated product page at `/skiplet/` with gameplay details, platform info, and support links
+- public support, privacy, accessibility, and legal pages aligned with Skiplet
 - a redirect page at `/one-clear-path/` pointing to the Steam store listing
 
 ## Customer-facing content workflow

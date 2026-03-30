@@ -42,7 +42,7 @@ Help a cold visitor understand:
 
 ## Page focus
 
-- **Homepage:** company story, Foculoom Dash showcase, current availability, and support surface
+- **Homepage:** company story, Skiplet showcase, current availability, and support surface
 - **Product pages:** what the product does, who it serves, what is currently known, and whether it is coming soon or live
 - **Support/legal pages:** the current public scope only; do not document store-specific flows until they are actually relevant
 
