@@ -42,10 +42,17 @@ one-clear-path/     Redirect page to Steam store listing
 assets/             Public CSS, icons, images, and manifest files
 scripts/            Local validation and build helpers (validate_site.py, build_site.py)
 _site/              Generated publishable artifact (output of build_site.py)
-.specify/           Internal planning: spec.md, tasks.md, plan.md
+.specify/           Internal planning: spec.md, tasks.md, plan.md (⚠️ DEPRECATED — use GitHub Issues on foculoom-project)
 .github/            GitHub config, instructions, agents, and Copilot guidance
 README.md           Human-readable source of truth for public-site guardrails
 ```
+
+## Issue Tracking
+
+Work items for this repo are tracked as **GitHub Issues on [foculoom/foculoom-project](https://github.com/foculoom/foculoom-project/issues)**.
+The `.specify/` directory is deprecated — do not create new tasks or specs there.
+
+Every PR in this repo must include `Closes foculoom/foculoom-project#N` in the body to auto-close the tracked issue.
 
 ## Working Rules
 

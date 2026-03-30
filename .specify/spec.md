@@ -1,5 +1,9 @@
 # 012-A — foculoom.github.io: Spec
 
+> **⚠️ DEPRECATED** — This spec is a historical artifact from the SpecKit era.
+> New specs and issues are tracked on [foculoom/foculoom-project GitHub Issues](https://github.com/foculoom/foculoom-project/issues).
+> Do not add new requirements here.
+
 > **Type:** Static marketing website (GitHub Pages)
 > **Domain:** foculoom.com
 > **Status:** Pre-launch — no products are in any store yet

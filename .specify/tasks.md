@@ -1,5 +1,15 @@
 # 012 — foculoom.github.io: Tasks
 
+> **⚠️ DEPRECATED** — Tasks are now tracked as [GitHub Issues on foculoom/foculoom-project](https://github.com/foculoom/foculoom-project/issues).
+> Pending tasks T022-T027 have been migrated:
+> - T022 → [#16](https://github.com/foculoom/foculoom-project/issues/16)
+> - T023 → [#17](https://github.com/foculoom/foculoom-project/issues/17)
+> - T024 → [#18](https://github.com/foculoom/foculoom-project/issues/18)
+> - T025 → [#19](https://github.com/foculoom/foculoom-project/issues/19)
+> - T026 → [#20](https://github.com/foculoom/foculoom-project/issues/20)
+> - T027 → [#21](https://github.com/foculoom/foculoom-project/issues/21)
+> Do not add new tasks here.
+
 > All file paths relative to the repo root (`foculoom.github.io/`).
 
 ---
