@@ -50,3 +50,8 @@ templates/                  — Product page template (reference only)
 - Feature branches from `master`
 - Always run `python3 scripts/validate_site.py` before committing
 - Rebuild `_site/` with `python3 scripts/build_site.py` after changes
+
+## Issue Tracking
+
+Work items are tracked as GitHub Issues on [foculoom/foculoom-project](https://github.com/foculoom/foculoom-project/issues).
+The `.specify/` directory is deprecated. Every PR must include `Closes foculoom/foculoom-project#N` in the body.
